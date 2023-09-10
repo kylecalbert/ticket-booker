@@ -1,11 +1,15 @@
 import logo from './logo.svg';
-import { AppContainer } from './AppStyles';
 
+
+import { Navbar } from './components/Navbar';
+import { AppContainer } from './App.styles';
 function App() {
   return (
   <AppContainer>
-<div>ssasa  </div>
+ <Navbar/>
   </AppContainer>
+
+ 
   );
 }
 

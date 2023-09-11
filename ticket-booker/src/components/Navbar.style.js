@@ -1,27 +1,41 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Navbar } from './Navbar';
-import { screen } from '@testing-library/react';
 
 export const NavbarContainer = styled.nav`
   width: 95%;
   height: 80px;
-  background-color: black;
+  background-color: #222222;
+  height: ${(props) => (props.extendNavbar ? '100vh' : '80px')};
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border-bottom: 1px solid #dbdbdb;
+
+  @media (min-width: 556px) {
+    //if the width is atl
+    height: 80px;
+  }
 `;
+
 export const LeftContainer = styled.div`
   display: flex;
   flex: 5%;
+  height: 80px;
   align-items: center;
   justify-content: center;
+  /* background: green; */
 `;
+
 export const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+export const LogoImage = styled.img`
+  margin: 10px;
+  max-width: 100px;
+  height: auto; //height auto to allow the image to scale properly and not overstretch
 `;
 
 export const MiddleContainer = styled.div`
@@ -35,9 +49,14 @@ export const MenuContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: red;
+`;
 
-  @media (max-width: 555px) {
+export const ExtendedMenuContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 556px) {
+    ///hides when the width becomes 556 or greater
     display: none;
   }
 `;
@@ -47,7 +66,6 @@ export const RightContainer = styled.div`
   flex: 5%;
   align-items: center;
   justify-content: center;
-  /* background-color: purple; */
 `;
 
 export const ProfileContainer = styled.div`
@@ -55,12 +73,6 @@ export const ProfileContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-export const LogoImage = styled.img`
-  margin: 10px;
-  max-width: 100px;
-  height: auto; //height auto to allow the image to scale properly and not over stretch
 `;
 
 export const ProfileImage = styled.img`
@@ -74,14 +86,18 @@ export const NavbarLink = styled(Link)`
   text-decoration: none;
   padding: 20px;
   font-size: 18px;
+
+  @media (max-width: 555px) {
+    display: none;
+  }
 `;
 
 export const NavbarInnerContainer = styled.div`
   display: flex;
-  flex-direction: row;
   /* background: blue; */
   width: 100%;
 `;
+
 export const MenuIconContainer = styled.button`
   display: flex;
   align-items: center;
@@ -94,17 +110,22 @@ export const MenuIconContainer = styled.button`
   cursor: pointer;
   border: none;
 
-  @media (min-width: 700px) {
+  @media (min-width: 556px) {
     display: none;
   }
 `;
+
 export const NavbarExtendedContainer = styled.div`
   background-color: 'grey';
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background-color: red; */
+`;
 
-  @media (min-width: 700px) {
-    display: none;
-  }
+export const NavbarLinkExtended = styled(Link)`
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 18px;
 `;

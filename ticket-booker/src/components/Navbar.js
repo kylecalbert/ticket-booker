@@ -10,35 +10,37 @@ import {
   ProfileImage,
   RightContainer,
   NavbarExtendedContainer,
-} from './Navabar.style';
+  NavbarLinkExtended,
+  ExtendedMenuContainer,
+} from './Navbar.style';
 import Logo from '../Assets/Logo.png';
-import { LogoImage } from './Navabar.style';
+import { LogoImage } from './Navbar.style';
 import Profile from '../Assets/Profile.png';
 import { Link } from 'react-router-dom';
-import { NavbarLink } from './Navabar.style';
-import { NavbarInnerContainer } from './Navabar.style';
+import { NavbarLink } from './Navbar.style';
+import { NavbarInnerContainer } from './Navbar.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export const Navbar = () => {
-  const [extendNavbar, setExtendedNavbar] = useState(false);
+  const [extendNavbar, setExtendNavbar] = useState(false);
   return (
-    <NavbarContainer>
+    <NavbarContainer extendNavbar={extendNavbar}>
       <NavbarInnerContainer>
         <LeftContainer>
           <MenuIconContainer
             onClick={() => {
-              setExtendedNavbar((currentValue) => !currentValue);
+              setExtendNavbar((current) => !current);
             }}
           >
             {extendNavbar ? (
               <FontAwesomeIcon
-                icon={faBars}
+                icon={faTimes}
                 style={{ color: 'white', fontSize: '35px' }}
               />
             ) : (
               <FontAwesomeIcon
-                icon={faTimes}
+                icon={faBars}
                 style={{ color: 'white', fontSize: '35px' }}
               />
             )}
@@ -61,14 +63,17 @@ export const Navbar = () => {
           </ProfileContainer>
         </RightContainer>
       </NavbarInnerContainer>
-      <NavbarExtendedContainer>
-        <MenuContainer>
-          <NavbarLink to="/Home">Home</NavbarLink>
-          <NavbarLink to="/About">About</NavbarLink>
-          <NavbarLink to="/Contact">Contact</NavbarLink>
-          <NavbarLink to="/FAQ">FAQ</NavbarLink>
-        </MenuContainer>
-      </NavbarExtendedContainer>
+
+      {extendNavbar && (
+        <NavbarExtendedContainer>
+          <ExtendedMenuContainer>
+            <NavbarLinkExtended to="/Home">Home</NavbarLinkExtended>
+            <NavbarLinkExtended to="/About">About</NavbarLinkExtended>
+            <NavbarLinkExtended to="/Contact">Contact</NavbarLinkExtended>
+            <NavbarLinkExtended to="/FAQ">FAQ</NavbarLinkExtended>
+          </ExtendedMenuContainer>
+        </NavbarExtendedContainer>
+      )}
     </NavbarContainer>
   );
 };

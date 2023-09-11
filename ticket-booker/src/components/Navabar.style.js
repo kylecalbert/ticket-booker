@@ -53,7 +53,6 @@ background-color: purple ;
 `
 
 
-
 export const ProfileContainer = styled.div `
 display:flex ;
 flex-direction: column ;
@@ -62,3 +61,16 @@ justify-content: center ;
 
 `
 
+export const LogoImage = styled.img `
+margin:10px ;
+max-width:100px ;
+height:auto ; //height auto to allow the image to scale properly and not over stretch
+
+`
+
+export const ProfileImage  = styled.img `
+margin:10px;
+max-width:100px ;
+height:auto ;
+
+`

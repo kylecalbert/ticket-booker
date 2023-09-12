@@ -11,9 +11,9 @@ import {
   NavbarLinkExtended,
   ExtendedMenuContainer,
 } from './Navbar.style';
-import Logo from '../Assets/Logo.png';
+import Logo from '../../Assets/Logo.png';
 import { LogoImage } from './Navbar.style';
-import Profile from '../Assets/Profile.png';
+import Profile from '../../Assets/Profile.png';
 import { NavbarLink } from './Navbar.style';
 import { NavbarInnerContainer } from './Navbar.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

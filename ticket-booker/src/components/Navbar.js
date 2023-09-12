@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import {
   LeftContainer,
   MenuContainer,
-  LogoContainer,
   MiddleContainer,
   NavbarContainer,
   MenuIconContainer,
-  ProfileContainer,
   ProfileImage,
   RightContainer,
   NavbarExtendedContainer,
@@ -16,7 +14,6 @@ import {
 import Logo from '../Assets/Logo.png';
 import { LogoImage } from './Navbar.style';
 import Profile from '../Assets/Profile.png';
-import { Link } from 'react-router-dom';
 import { NavbarLink } from './Navbar.style';
 import { NavbarInnerContainer } from './Navbar.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -45,9 +42,8 @@ export const Navbar = () => {
               />
             )}
           </MenuIconContainer>
-          <LogoContainer>
-            <LogoImage src={Logo} />
-          </LogoContainer>
+
+          <LogoImage src={Logo} />
         </LeftContainer>
         <MiddleContainer>
           <MenuContainer>
@@ -58,9 +54,7 @@ export const Navbar = () => {
           </MenuContainer>
         </MiddleContainer>
         <RightContainer>
-          <ProfileContainer>
-            <ProfileImage src={Profile} />
-          </ProfileContainer>
+          <ProfileImage src={Profile} />
         </RightContainer>
       </NavbarInnerContainer>
 

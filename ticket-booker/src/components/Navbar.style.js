@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { darkModeColors } from './colors';
 
+const minWidth = '556px';
 export const NavbarContainer = styled.nav`
   width: 95%;
   height: 80px;
-  background-color: #222222;
+  background-color: ${darkModeColors.background};
   height: ${(props) => (props.extendNavbar ? '100vh' : '80px')};
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid ${darkModeColors.borders};
 
-  @media (min-width: 556px) {
-    //if the width is atl
+  @media (min-width: ${minWidth}) {
     height: 80px;
   }
 `;
@@ -23,13 +24,6 @@ export const LeftContainer = styled.div`
   align-items: center;
   justify-content: center;
   /* background: green; */
-`;
-
-export const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const LogoImage = styled.img`
@@ -55,7 +49,7 @@ export const ExtendedMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 556px) {
+  @media (min-width: ${minWidth}) {
     ///hides when the width becomes 556 or greater
     display: none;
   }
@@ -68,13 +62,6 @@ export const RightContainer = styled.div`
   justify-content: center;
 `;
 
-export const ProfileContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const ProfileImage = styled.img`
   margin: 10px;
   max-width: 100px;
@@ -82,19 +69,19 @@ export const ProfileImage = styled.img`
 `;
 
 export const NavbarLink = styled(Link)`
-  color: white;
+  color: ${darkModeColors.textPrimary};
   text-decoration: none;
   padding: 20px;
   font-size: 18px;
 
-  @media (max-width: 555px) {
+  @media (max-width: ${minWidth}) {
     display: none;
   }
 `;
 
 export const NavbarInnerContainer = styled.div`
   display: flex;
-  /* background: blue; */
+
   width: 100%;
 `;
 
@@ -105,26 +92,23 @@ export const MenuIconContainer = styled.button`
   width: 70px;
   height: 50px;
   background: none;
-  color: white;
   font-size: 45px;
   cursor: pointer;
   border: none;
 
-  @media (min-width: 556px) {
+  @media (min-width: ${minWidth}) {
     display: none;
   }
 `;
 
 export const NavbarExtendedContainer = styled.div`
-  background-color: 'grey';
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: red; */
 `;
 
 export const NavbarLinkExtended = styled(Link)`
-  color: white;
+  color: ${darkModeColors.textPrimary};
   text-decoration: none;
   padding: 20px;
   font-size: 18px;

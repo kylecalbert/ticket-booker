@@ -15,14 +15,12 @@ export const HeaderContainer = styled.header`
 export const TextContainer = styled.text`
   display: flex;
   flex-direction: column;
-
   margin-top: 100px;
 `;
 
 export const LargeTextContainer = styled.text`
   color: ${darkModeColors.textPrimary};
   text-decoration: none;
-
   font-size: 30px;
   font-weight: bold;
 `;

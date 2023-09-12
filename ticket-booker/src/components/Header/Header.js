@@ -5,7 +5,7 @@ import {
   SmallTextContainer,
   TextContainer,
 } from './Header.style';
-
+import { HeaderButton } from './HeaderButton';
 export const Header = () => {
   return (
     <HeaderContainer>
@@ -15,6 +15,8 @@ export const Header = () => {
           Take a look at all of your tickets.
         </SmallTextContainer>
       </TextContainer>
+
+      <HeaderButton />
     </HeaderContainer>
   );
 };

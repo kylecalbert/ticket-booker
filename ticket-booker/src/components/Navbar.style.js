@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { darkModeColors } from './colors';
+import { darkModeColors } from '../constants/colors';
 
 const minWidth = '556px';
 export const NavbarContainer = styled.nav`

@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import { AppContainer } from './AppStyles';
+import { BrowserRouter as Router } from 'react-router-dom';
 
+import { Navbar } from './components/Navbar/Navbar';
+import { AppContainer } from './App.styles';
 function App() {
   return (
-  <AppContainer>
-<div>ssasa  </div>
-  </AppContainer>
+    <AppContainer>
+      <Router>
+        <Navbar />
+      </Router>
+    </AppContainer>
   );
 }
 

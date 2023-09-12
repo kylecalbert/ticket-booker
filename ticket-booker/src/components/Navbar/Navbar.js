@@ -43,7 +43,7 @@ export const Navbar = () => {
             )}
           </MenuIconContainer>
 
-          <LogoImage src={Logo} />
+          <LogoImage src={Logo} alt="Logo" />
         </LeftContainer>
         <MiddleContainer>
           <MenuContainer>

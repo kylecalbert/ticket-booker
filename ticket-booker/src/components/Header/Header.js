@@ -2,7 +2,7 @@ import React from 'react';
 import { HeaderContainer, TextContainer } from './Header.style';
 import { darkModeColors } from '../../constants/colors';
 import { HeaderButton } from './HeaderButton';
-import { Text } from '../Text';
+import { Text } from '../Text/Text';
 export const Header = () => {
   return (
     <HeaderContainer>

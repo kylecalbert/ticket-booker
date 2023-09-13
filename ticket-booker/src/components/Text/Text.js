@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { darkModeColors } from '../constants/colors';
+import { darkModeColors } from '../../constants/colors';
 ///customizable text that can be reused
 const StyledText = styled.div`
   color: ${(props) => props.color || darkModeColors.textPrimary};

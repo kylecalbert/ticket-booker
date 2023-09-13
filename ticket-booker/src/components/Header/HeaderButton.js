@@ -2,7 +2,7 @@ import React from 'react';
 import { ButtonContainer, LeftContainerContent } from './HeaderButton.style';
 import { IconContainer } from './HeaderButton.style';
 import TicketsIcon from '../../Assets/TicketsIcon.png';
-import { Text } from '../Text';
+import { Text } from '../Text/Text';
 export const HeaderButton = () => {
   return (
     <ButtonContainer>

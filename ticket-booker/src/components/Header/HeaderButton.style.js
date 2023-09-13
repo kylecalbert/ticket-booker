@@ -11,9 +11,10 @@ export const ButtonContainer = styled.button`
   color: #ffffff;
   border: none;
   border-radius: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
 
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-top: 50px;
   font-size: 16px;
 `;
 

@@ -7,7 +7,7 @@ export const ButtonContainer = styled.button`
   justify-content: space-between;
   width: 210px;
   height: 40px;
-  background-color: #0074d9;
+  background-color: ${darkModeColors.accent};
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -30,21 +30,21 @@ export const IconContainer = styled.img`
   height: auto;
 `;
 
-export const SmallTextContainer = styled.text`
-  color: ${darkModeColors.textPrimary};
-  text-decoration: none;
-  font-size: 14px;
-  margin-left: 10px;
+// export const SmallTextContainer = styled.text`
+//   color: ${darkModeColors.textPrimary};
+//   text-decoration: none;
+//   font-size: 14px;
+//   margin-left: 10px;
 
-  font-weight: bold;
-`;
+//   font-weight: bold;
+// `;
 
-export const RightContainerContent = styled.text`
-  color: ${darkModeColors.textPrimary};
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 10px;
-`;
+// export const RightContainerContent = styled.text`
+//   color: ${darkModeColors.textPrimary};
+//   text-decoration: none;
+//   font-size: 14px;
+//   font-weight: bold;
+//   margin-right: 10px;
+// `;
 
 ///the text can e made resuable

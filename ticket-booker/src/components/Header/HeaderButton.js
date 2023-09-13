@@ -7,6 +7,16 @@ import {
 import { IconContainer } from './HeaderButton.style';
 import TicketsIcon from '../../Assets/TicketsIcon.png';
 import { Text } from '../Text/Text';
+
+// const data = [
+//   {
+//     text: 'All Tickets',
+//     count: 6,
+//     icon: require('../../Assets/TicketsIcon.png'),
+//   },
+//   { text: 'Travels', count: 4, icon: require('../../Assets/AirplaneIcon.png') },
+// ];
+
 export const HeaderButton = () => {
   return (
     <ButtonGridContainer>

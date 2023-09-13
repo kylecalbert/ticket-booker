@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 import { darkModeColors } from '../../constants/colors';
 
+export const ButtonGridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  overflow-y: scroll;
+`;
 export const ButtonContainer = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 210px;
-  height: 40px;
+  width: 400px;
+  height: 50px;
   background-color: ${darkModeColors.accent};
   color: #ffffff;
   border: none;
   border-radius: 8px;
-
   padding-bottom: 8px;
   padding-top: 8px;
   margin-top: 50px;

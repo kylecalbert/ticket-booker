@@ -7,9 +7,9 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <TextContainer>
-        <Text size="30px">Welcome back, Gjon Hajdari</Text>
+        <Text size="40px">Welcome back, Gjon Hajdari</Text>
         <Text
-          size="14px"
+          size="20px"
           margin="10px 0 0 0"
           color={darkModeColors.textSecondary}
         >

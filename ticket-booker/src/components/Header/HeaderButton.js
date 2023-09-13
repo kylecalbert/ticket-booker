@@ -1,18 +1,20 @@
 import React from 'react';
 import {
   ButtonContainer,
-  LeftContainer,
+  LeftContainerContent,
   SmallTextContainer,
+  RightContainerContent,
 } from './HeaderButton.style';
 import { IconContainer } from './HeaderButton.style';
 import TicketsIcon from '../../Assets/TicketsIcon.png';
 export const HeaderButton = () => {
   return (
     <ButtonContainer>
-      <LeftContainer>
+      <LeftContainerContent>
         <IconContainer src={TicketsIcon} />
         <SmallTextContainer>All Tickets</SmallTextContainer>
-      </LeftContainer>
+      </LeftContainerContent>
+      <RightContainerContent>6</RightContainerContent>
     </ButtonContainer>
   );
 };

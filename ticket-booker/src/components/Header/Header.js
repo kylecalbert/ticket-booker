@@ -1,19 +1,20 @@
 import React from 'react';
-import {
-  HeaderContainer,
-  LargeTextContainer,
-  SmallTextContainer,
-  TextContainer,
-} from './Header.style';
+import { HeaderContainer, TextContainer } from './Header.style';
+import { darkModeColors } from '../../constants/colors';
 import { HeaderButton } from './HeaderButton';
+import { Text } from '../Text';
 export const Header = () => {
   return (
     <HeaderContainer>
       <TextContainer>
-        <LargeTextContainer>Welcome back, Gjon Hajdari</LargeTextContainer>
-        <SmallTextContainer>
+        <Text size="30px">Welcome back, Gjon Hajdari</Text>
+        <Text
+          size="14px"
+          margin="10px 0 0 0"
+          color={darkModeColors.textSecondary}
+        >
           Take a look at all of your tickets.
-        </SmallTextContainer>
+        </Text>
       </TextContainer>
 
       <HeaderButton />

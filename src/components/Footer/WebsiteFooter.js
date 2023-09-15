@@ -8,7 +8,6 @@ export const MiddleFooterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
 `;
 
 export const IconContainer = styled.img`
@@ -24,7 +23,7 @@ export const RightFooterContainer = styled.div`
 `;
 export const WebsiteFooter = () => {
   return (
-    <Footer>
+    <Footer padding={'10px'}>
       <Text size={'15px'}>
         Copyright © 2022 TicketBooker. All rights reserved.
       </Text>
@@ -33,7 +32,9 @@ export const WebsiteFooter = () => {
         <IconContainer src={Socials} />
       </MiddleFooterContainer>
       <RightFooterContainer>
-        <Text size={'15px'}>Privacy Policy</Text>
+        <Text margin={'0 10px 0 0'} size={'15px'}>
+          Privacy Policy
+        </Text>
         <Text size={'15px'}>Terms of Use</Text>
       </RightFooterContainer>
     </Footer>

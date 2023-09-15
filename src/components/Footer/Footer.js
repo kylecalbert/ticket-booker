@@ -9,6 +9,15 @@ export const StyledFooter = styled.div`
   justify-content: space-between;
   margin: ${(props) => props.margin || '0px'};
   background-color: red;
+  padding: ${(props) => props.padding || '0px'};
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 export const Footer = ({ ...props }) => {
   return <StyledFooter {...props}></StyledFooter>;

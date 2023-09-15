@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
   justify-content: flex-start;
   width: 400px;
   height: 200px;
-  background-color: red;
+  background-color: ${darkModeColors.foreground};
   border-radius: 8px;
   margin-top: 10px;
 `;
@@ -19,7 +19,7 @@ export const CardDetails = styled.div`
   margin-left: 10px;
   width: 20%;
   height: 75%;
-  background-color: red;
+  /* background-color: red; */
   border-bottom: 1px solid black;
 
   margin-top: 10px;
@@ -34,7 +34,10 @@ export const CardFooter = styled.div`
   height: 20%;
   justify-content: space-between;
   margin-bottom: 4px;
-  background-color: blue;
+  border-top: ${(props) =>
+    `${props.borderWidth || 'none'} ${props.borderColor || 'black'}`};
+  /* background-color: blue; */
+  /* background-color: blue; */
 `;
 
 export const AddButtonContainer = styled.button`

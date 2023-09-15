@@ -7,5 +7,4 @@ export const ContentContainer = styled.div`
   width: 95%;
   height: 450px;
   margin-top: 20px;
-  border-bottom: 1px solid ${darkModeColors.borders};
 `;

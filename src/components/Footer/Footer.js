@@ -8,8 +8,9 @@ export const StyledFooter = styled.div`
   height: ${(props) => props.height || '15%'};
   justify-content: space-between;
   margin: ${(props) => props.margin || '0px'};
-  background-color: red;
+  /* background-color: red; */
   padding: ${(props) => props.padding || '0px'};
+  margin-top: auto;
 
   @media (max-width: 600px) {
     display: flex;

@@ -7,7 +7,7 @@ export const NavbarContainer = styled.nav`
   width: 95%;
   height: 80px;
   background-color: ${darkModeColors.background};
-  height: ${(props) => (props.extendNavbar ? '100vh' : '80px')};
+  height: ${(props) => (props.extendNavbar ? '400px' : '80px')};
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid ${darkModeColors.borders};

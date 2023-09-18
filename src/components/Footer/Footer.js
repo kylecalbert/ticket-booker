@@ -7,15 +7,23 @@ export const StyledFooter = styled.div`
   width: 95%;
   height: ${(props) => props.height || '15%'};
   justify-content: space-between;
+  align-items: center;
   margin: ${(props) => props.margin || '0px'};
   /* background-color: red; */
+  border-top: ${(props) => props.borderTop || '0px'};
   padding: ${(props) => props.padding || '0px'};
   margin-top: auto;
 
   @media (max-width: ${minWidth}) {
     display: flex;
-    flex-direction: column;
-    height: 200px;
+
+    flex-direction: ${(props) => props.flexDirection || 'column'};
+    /* flex-direction: column; */
+    /* height: 200px; */
+    height: ${(props) => props.height || '200px'};
+    /* justify-content: ${(props) =>
+      props.justifyContent || 'space-between'}; */
+
     justify-content: space-between;
     align-items: center;
   }

@@ -10,6 +10,10 @@ export const CardContainer = styled.div`
   background-color: ${darkModeColors.foreground};
   border-radius: 8px;
   margin-top: 10px;
+  @media (max-width: 556px) {
+    width: 330px;
+    height: 200px;
+  }
 `;
 
 export const CardDetails = styled.div`
@@ -20,10 +24,21 @@ export const CardDetails = styled.div`
   width: 20%;
   height: 75%;
   /* background-color: red; */
-  border-bottom: 1px solid black;
 
   margin-top: 10px;
   background-color: blue;
+`;
+
+export const TopDetailsContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const DateTimeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const CardFooter = styled.div`

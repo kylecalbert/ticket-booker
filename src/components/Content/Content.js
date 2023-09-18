@@ -5,8 +5,8 @@ import { CardFooter } from './Card.styles';
 export const Content = () => {
   return (
     <ContentContainer>
-      {/* <Card />
-      <Card /> */}
+      <Card />
+      <Card />
     </ContentContainer>
   );
 };

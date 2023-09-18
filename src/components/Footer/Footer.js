@@ -12,7 +12,7 @@ export const StyledFooter = styled.div`
   padding: ${(props) => props.padding || '0px'};
   margin-top: auto;
 
-  @media (max-width: 600px) {
+  @media (max-width: 556px) {
     display: flex;
     flex-direction: column;
     height: 200px;

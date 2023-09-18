@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { darkModeColors } from '../../constants/colors';
 
-const minWidth = '556px';
+export const minWidth = '556px';
 export const NavbarContainer = styled.nav`
   width: 95%;
   height: 80px;
   background-color: ${darkModeColors.background};
-  height: ${(props) => (props.extendNavbar ? '100vh' : '80px')};
+  height: ${(props) => (props.extendNavbar ? '400px' : '80px')};
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid ${darkModeColors.borders};

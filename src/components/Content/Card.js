@@ -10,7 +10,16 @@ import { Footer } from '../Footer/Footer';
 export const Card = () => {
   return (
     <CardContainer>
-      <CardDetails />
+      <CardDetails>
+        <Text size={'25px'} margin={'0 0 10px 0'} color={'red'}>
+          Title
+        </Text>
+        <Text size={'16px'} color={'red'}>
+          Date
+        </Text>
+        <Text color={'red'}>Location</Text>
+      </CardDetails>
+
       <Footer margin={'0 0 4px 10px'}>
         <Text size={'15px'} fontWeight={'normal'}>
           Ticket type

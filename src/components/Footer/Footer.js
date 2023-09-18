@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-
+import { minWidth } from '../Navbar/Navbar.style';
 export const StyledFooter = styled.div`
   display: flex;
   width: 95%;
@@ -12,7 +12,7 @@ export const StyledFooter = styled.div`
   padding: ${(props) => props.padding || '0px'};
   margin-top: auto;
 
-  @media (max-width: 556px) {
+  @media (max-width: ${minWidth}) {
     display: flex;
     flex-direction: column;
     height: 200px;

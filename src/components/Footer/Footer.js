@@ -16,13 +16,10 @@ export const StyledFooter = styled.div`
 
   @media (max-width: ${minWidth}) {
     display: flex;
-
     flex-direction: ${(props) => props.flexDirection || 'column'};
     /* flex-direction: column; */
     /* height: 200px; */
     height: ${(props) => props.height || '200px'};
-    /* justify-content: ${(props) =>
-      props.justifyContent || 'space-between'}; */
 
     justify-content: space-between;
     align-items: center;

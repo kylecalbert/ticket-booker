@@ -4,7 +4,7 @@ import { darkModeColors } from '../../constants/colors';
 ///customizable text that can be reused
 const StyledText = styled.div`
   color: ${(props) => props.color || darkModeColors.textPrimary};
-  font-size: ${(props) => props.size || '20px'};
+  font-size: ${(props) => props.size || '1.5em'};
   font-weight: ${(props) => props.fontWeight || 'bold'};
   margin: ${(props) => props.margin || '0'};
   padding: ${(props) => props.padding || '0'};

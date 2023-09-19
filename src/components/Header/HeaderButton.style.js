@@ -24,7 +24,7 @@ export const ButtonContainer = styled.button`
   padding-bottom: 8px;
   padding-top: 8px;
   margin-top: 50px;
-  font-size: 16px;
+  font-size: 1em;
 `;
 
 export const LeftContainerContent = styled.div`

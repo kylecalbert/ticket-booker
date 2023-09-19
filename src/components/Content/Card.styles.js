@@ -21,15 +21,20 @@ export const CardDetails = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 10px;
-  width: 20%;
+  width: 95%;
   height: 75%;
   /* background-color: red; */
 
   margin-top: 10px;
-  background-color: blue;
+  /* background-color: blue; */
 `;
 
 export const TopDetailsContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const BottomDetailsContainer = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -39,6 +44,7 @@ export const DateTimeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 5px;
 `;
 
 export const CardFooter = styled.div`
@@ -69,7 +75,7 @@ export const AddButtonContainer = styled.button`
   padding-bottom: 2px;
   padding-top: 2px;
 
-  font-size: 16px;
+  font-size: 1.2em;
 `;
 
 // export const LeftFooterContainer = styled.div`
@@ -95,5 +101,3 @@ export const AddButtonContainer = styled.button`
 //   margin-top: 10px;
 //   background-color: blue;
 // `;
-
-const TitleContainer = styled.div``;

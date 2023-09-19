@@ -72,7 +72,7 @@ export const NavbarLink = styled(Link)`
   color: ${darkModeColors.textPrimary};
   text-decoration: none;
   padding: 20px;
-  font-size: 18px;
+  font-size: 1.2em;
 
   @media (max-width: ${minWidth}) {
     display: none;
@@ -111,5 +111,5 @@ export const NavbarLinkExtended = styled(Link)`
   color: ${darkModeColors.textPrimary};
   text-decoration: none;
   padding: 20px;
-  font-size: 18px;
+  font-size: 1.2em;
 `;

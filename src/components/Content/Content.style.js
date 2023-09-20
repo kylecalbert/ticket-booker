@@ -25,7 +25,25 @@ export const CardContainer = styled.div`
 
     grid-template-columns: repeat(3, 1fr);
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1232px) {
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 830px) {
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 768px) {
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 556px) {
     display: grid;
     gap: 10px;
 

@@ -11,6 +11,11 @@ export const CardContainer = styled.div`
   border-radius: 8px;
   margin-top: 10px;
 
+  @media (max-width: 768px) {
+    width: 22rem;
+    height: 12.5rem;
+  }
+
   @media (max-width: 556px) {
     width: 25rem;
     height: 12.5rem;

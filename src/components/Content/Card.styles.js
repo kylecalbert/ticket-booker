@@ -5,14 +5,28 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 400px;
-  height: 200px;
+  width: 25rem;
+  height: 12.5rem;
   background-color: ${darkModeColors.foreground};
   border-radius: 8px;
   margin-top: 10px;
+
   @media (max-width: 556px) {
-    width: 330px;
-    height: 200px;
+    width: 25rem;
+    height: 12.5rem;
+  }
+
+  @media (max-width: 400px) {
+    width: 24rem;
+    height: 12.5rem;
+  }
+  @media (max-width: 380px) {
+    width: 22rem;
+    height: 12.5rem;
+  }
+  @media (max-width: 300px) {
+    width: 16rem;
+    height: 12.5rem;
   }
 `;
 
@@ -65,8 +79,8 @@ export const AddButtonContainer = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 30px;
+  width: 3.75rem;
+  height: 1.875rem;
   background-color: ${(props) =>
     props.color || darkModeColors.accent}; //{darkModeColors.accent}
   color: #ffffff;
@@ -77,27 +91,3 @@ export const AddButtonContainer = styled.button`
 
   font-size: 1.2em;
 `;
-
-// export const LeftFooterContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   margin-left: 10px;
-//   width: 90%;
-//   height: 20%;
-
-//   margin-top: 10px;
-//   background-color: blue;
-// `;
-
-// export const RightFooterContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   margin-left: 10px;
-//   width: 90%;
-//   height: 20%;
-
-//   margin-top: 10px;
-//   background-color: blue;
-// `;

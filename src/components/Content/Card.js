@@ -17,10 +17,9 @@ import { Footer } from '../Footer/Footer';
 import CalendarDark from '../../Assets/dark/calendar.png';
 import LocationDark from '../../Assets/dark/location.png';
 import { Image } from '../Image/Image';
-
+import { fontSizes, fontWeight } from '../Fonts/Fonts';
 //create constant for resued sizes
-const SemiBold = '600';
-const textSize = '1em';
+
 export const Card = () => {
   return (
     <CardContainer>
@@ -36,16 +35,16 @@ export const Card = () => {
           <Image src={CalendarDark} />
           <DateTimeContainer>
             <Text
-              fontWeight={SemiBold}
-              size={textSize}
+              fontWeight={fontSizes.SemiBold}
+              size={fontSizes.small}
               color={darkModeColors.textPrimary}
             >
               Date
             </Text>
             <Text
-              fontWeight={SemiBold}
+              fontWeight={fontSizes.SemiBold}
               margin={'4px 0 0 0 '}
-              size={textSize}
+              size={fontSizes.small}
               color={darkModeColors.textSecondary}
             >
               Time
@@ -56,8 +55,8 @@ export const Card = () => {
         <BottomDetailsContainer>
           <Image src={LocationDark} />
           <Text
-            fontWeight={SemiBold}
-            size={textSize}
+            fontWeight={fontWeight.semiBold}
+            size={fontSizes.small}
             margin={'0 0 0 5px'}
             color={darkModeColors.primary}
           >
@@ -75,8 +74,8 @@ export const Card = () => {
       >
         <Text
           color={darkModeColors.accent}
-          size={textSize}
-          fontWeight={'normal'}
+          size={fontSizes.small}
+          fontWeight={fontWeight.normal}
         >
           Ticket type
         </Text>

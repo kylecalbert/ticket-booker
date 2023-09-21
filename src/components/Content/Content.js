@@ -1,12 +1,28 @@
 import React from 'react';
-import { ContentContainer } from './Content.style';
+import { ContentContainer, CardContainer } from './Content.style';
 import { Card } from './Card';
-import { CardFooter } from './Card.styles';
 export const Content = () => {
   return (
     <ContentContainer>
-      {/* <Card />
-      <Card /> */}
+      <CardContainer>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </CardContainer>
     </ContentContainer>
   );
 };

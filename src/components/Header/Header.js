@@ -3,13 +3,14 @@ import { HeaderContainer, TextContainer } from './Header.style';
 import { darkModeColors } from '../../constants/colors';
 import { HeaderButton } from './HeaderButton';
 import { Text } from '../Text/Text';
+import { fontSizes } from '../Fonts/Fonts';
 export const Header = () => {
   return (
     <HeaderContainer>
       <TextContainer>
-        <Text size="2.5em">Welcome back, Gjon Hajdari</Text>
+        <Text size={fontSizes.Large}>Welcome back, Kyle Calbert</Text>
         <Text
-          size="1.2em"
+          size={fontSizes.medium}
           margin="10px 0 0 0"
           color={darkModeColors.textSecondary}
         >

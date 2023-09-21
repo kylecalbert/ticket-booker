@@ -99,5 +99,5 @@ export const AddButtonContainer = styled.button`
   padding-bottom: 2px;
   padding-top: 2px;
 
-  font-size: 1.2em;
+  font-size: 1em;
 `;

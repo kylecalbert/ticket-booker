@@ -12,7 +12,7 @@ export const ContentContainer = styled.div`
 export const CardContainer = styled.div`
   display: grid;
 
-  background-color: blue;
+  /* background-color: blue; */
   width: 100%;
   align-items: center;
   justify-content: center;

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Socials from '../../Assets/dark/Socials.png';
 import { minWidth } from '../Navbar/Navbar.style';
 import { darkModeColors } from '../../constants/colors';
-
+import { fontSizes } from '../Fonts/Fonts';
 export const MiddleFooterContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@ export const FooterContainer = styled.div`
 export const WebsiteFooter = () => {
   return (
     <Footer padding={'10px'}>
-      <Text color={darkModeColors.textSecondary} size={'15px'}>
+      <Text color={darkModeColors.textSecondary} size={fontSizes.small}>
         Copyright © 2022 TicketBooker. All rights reserved.
       </Text>
 
@@ -34,10 +34,10 @@ export const WebsiteFooter = () => {
         <IconContainer src={Socials} />
       </FooterContainer>
       <FooterContainer>
-        <Text margin={'0 50px 0 0'} size={'15px'}>
+        <Text margin={'0 50px 0 0'} size={fontSizes.small}>
           Privacy Policy
         </Text>
-        <Text size={'15px'}>Terms of Use</Text>
+        <Text size={fontSizes.small}>Terms of Use</Text>
       </FooterContainer>
     </Footer>
   );

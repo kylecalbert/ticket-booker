@@ -1,0 +1,18 @@
+{
+  "Tickets": [
+    {
+      "id": 1,
+      "title": "Drake Concert",
+      "date": "10/12/2023",
+      "Location": "Wembley Stadium"
+    },
+    {
+      "id": 2,
+      "title": "Taylor Swift Concert",
+      "time": "7:30PM",
+      "date": "15/12/2023",
+      "Location": "02 Arena",
+      "ticketType": "Concert"
+    }
+  ]
+}

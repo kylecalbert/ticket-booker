@@ -1,0 +1,52 @@
+{
+  "Tickets": [
+    {
+      "id": 2,
+      "title": "Drake",
+      "time": "10:30PM",
+      "date": "1/06/2023",
+      "location": "Wembley Arena",
+      "ticketType": "Concert"
+    },
+    {
+      "id": 2,
+      "title": "Taylor Swift Concert",
+      "time": "7:30PM",
+      "date": "15/12/2023",
+      "location": "02 Arena",
+      "ticketType": "Concert"
+    },
+    {
+      "id": 3,
+      "title": "Avengers: Endgame",
+      "time": "2:00PM",
+      "date": "5/20/2023",
+      "location": "Cinema World",
+      "ticketType": "Movie"
+    },
+    {
+      "id": 4,
+      "title": "Flight to Paris",
+      "time": "8:45AM",
+      "date": "8/10/2023",
+      "location": "Airport Terminal 3",
+      "ticketType": "Flight"
+    },
+    {
+      "id": 5,
+      "title": "Inception",
+      "time": "4:30PM",
+      "date": "7/15/2023",
+      "location": "Movieplex Theater",
+      "ticketType": "Movie"
+    },
+    {
+      "id": 6,
+      "title": "Summer Vacation in Bali",
+      "time": "10:00AM",
+      "date": "6/25/2023",
+      "location": "Bali International Airport",
+      "ticketType": "Flight"
+    }
+  ]
+}

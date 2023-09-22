@@ -23,7 +23,7 @@ import { faCircleTrash } from '@fortawesome/free-solid-svg-icons';
 export const Navbar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false);
   return (
-    <NavbarContainer extendNavbar={extendNavbar}>
+    <NavbarContainer extendnavbar={extendNavbar}>
       <NavbarInnerContainer>
         <LeftContainer>
           <MenuIconContainer

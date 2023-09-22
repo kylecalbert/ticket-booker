@@ -66,7 +66,7 @@ export const BottomDetailsContainer = styled.div`
 export const DateTimeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: start;
   justify-content: center;
   margin-left: 5px;
 `;

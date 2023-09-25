@@ -10,7 +10,6 @@ import {
 } from './Card.styles';
 import { CardFooter } from './Card.styles';
 import { Text } from '../Text/Text';
-import { faTimes, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { darkModeColors } from '../../constants/colors';
 import { Footer } from '../Footer/Footer';
 
@@ -20,7 +19,7 @@ import { Image } from '../Image/Image';
 import { fontSizes, fontWeight } from '../Fonts/Fonts';
 //create constant for resued sizes
 
-export const Card = () => {
+export const Card = ({ title, date, time, location, ticketType }) => {
   return (
     <CardContainer>
       <CardDetails>
@@ -29,7 +28,7 @@ export const Card = () => {
           margin={'0 0 17px 0'}
           color={darkModeColors.textPrimary}
         >
-          Card Title
+          {title}
         </Text>
         <TopDetailsContainer>
           <Image src={CalendarDark} />
@@ -39,7 +38,7 @@ export const Card = () => {
               size={fontSizes.small}
               color={darkModeColors.textPrimary}
             >
-              Date
+              {date}
             </Text>
             <Text
               fontWeight={fontSizes.SemiBold}
@@ -47,7 +46,7 @@ export const Card = () => {
               size={fontSizes.small}
               color={darkModeColors.textSecondary}
             >
-              Time
+              {time}
             </Text>
           </DateTimeContainer>
         </TopDetailsContainer>
@@ -60,24 +59,24 @@ export const Card = () => {
             margin={'0 0 0 5px'}
             color={darkModeColors.primary}
           >
-            Location
+            {location}
           </Text>
         </BottomDetailsContainer>
       </CardDetails>
 
       <Footer
-        borderTop={`1px solid ${darkModeColors.borders}`}
+        bordertop={`1px solid ${darkModeColors.borders}`}
         margin={'0 0 4px 10px'}
         padding={'10px 0 10px 0 '}
         height={'35px'}
-        flexDirection={'row'}
+        flexdirection={'row'}
       >
         <Text
           color={darkModeColors.accent}
           size={fontSizes.small}
           fontWeight={fontWeight.normal}
         >
-          Ticket type
+          {ticketType}
         </Text>
         <AddButtonContainer>Add</AddButtonContainer>
       </Footer>

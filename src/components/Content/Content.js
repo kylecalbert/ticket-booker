@@ -6,10 +6,18 @@ export const Content = () => {
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/Tickets')
-      .then((response) => response.json())
-      .then((data) => setTickets(data))
-      .catch((error) => console.error('Error fetching data:', error));
+    async function fetchData() {
+      try {
+        const response = await fetch(`http://localhost:3001/Tickets`);
+
+        const data = await response.json();
+        setTickets(data);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    fetchData();
   }, []);
 
   console.log(tickets);

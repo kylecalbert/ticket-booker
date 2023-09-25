@@ -10,7 +10,6 @@ import {
 } from './Card.styles';
 import { CardFooter } from './Card.styles';
 import { Text } from '../Text/Text';
-import { faTimes, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { darkModeColors } from '../../constants/colors';
 import { Footer } from '../Footer/Footer';
 
@@ -20,7 +19,10 @@ import { Image } from '../Image/Image';
 import { fontSizes, fontWeight } from '../Fonts/Fonts';
 //create constant for resued sizes
 
-export const Card = ({ data }) => {
+export const Card = ({ title, date, time, location, ticketType }) => {
+  console.log(title);
+  console.log(date);
+
   return (
     <CardContainer>
       <CardDetails>
@@ -29,7 +31,7 @@ export const Card = ({ data }) => {
           margin={'0 0 17px 0'}
           color={darkModeColors.textPrimary}
         >
-          {data.title}
+          {title}
         </Text>
         <TopDetailsContainer>
           <Image src={CalendarDark} />
@@ -39,7 +41,7 @@ export const Card = ({ data }) => {
               size={fontSizes.small}
               color={darkModeColors.textPrimary}
             >
-              {data.date}
+              {date}
             </Text>
             <Text
               fontWeight={fontSizes.SemiBold}
@@ -47,7 +49,7 @@ export const Card = ({ data }) => {
               size={fontSizes.small}
               color={darkModeColors.textSecondary}
             >
-              {data.time}
+              {time}
             </Text>
           </DateTimeContainer>
         </TopDetailsContainer>
@@ -60,7 +62,7 @@ export const Card = ({ data }) => {
             margin={'0 0 0 5px'}
             color={darkModeColors.primary}
           >
-            {data.location}
+            {location}
           </Text>
         </BottomDetailsContainer>
       </CardDetails>
@@ -77,7 +79,7 @@ export const Card = ({ data }) => {
           size={fontSizes.small}
           fontWeight={fontWeight.normal}
         >
-          {data.ticketType}
+          {ticketType}
         </Text>
         <AddButtonContainer>Add</AddButtonContainer>
       </Footer>

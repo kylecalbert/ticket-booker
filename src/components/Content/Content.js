@@ -17,7 +17,13 @@ export const Content = () => {
     <ContentContainer>
       <CardContainer>
         {tickets.map((ticket) => (
-          <Card id={ticket.id} data={ticket} />
+          <Card
+            id={ticket.id}
+            title={ticket.title}
+            ticketType={ticket.ticketType}
+            date={ticket.date}
+            location={ticket.location}
+          />
         ))}
       </CardContainer>
     </ContentContainer>

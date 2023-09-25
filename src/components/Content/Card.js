@@ -20,9 +20,6 @@ import { fontSizes, fontWeight } from '../Fonts/Fonts';
 //create constant for resued sizes
 
 export const Card = ({ title, date, time, location, ticketType }) => {
-  console.log(title);
-  console.log(date);
-
   return (
     <CardContainer>
       <CardDetails>

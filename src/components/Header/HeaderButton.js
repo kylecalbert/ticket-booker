@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ButtonContainer,
   LeftContainerContent,
@@ -13,16 +13,33 @@ import { darkModeColors } from '../../constants/colors';
 
 import { Text } from '../Text/Text';
 
-// const data = [
-//   {
-//     text: 'All Tickets',
-//     count: 6,
-//     icon: require('../../Assets/TicketsIcon.png'),
-//   },
-//   { text: 'Travels', count: 4, icon: require('../../Assets/AirplaneIcon.png') },
-// ];
-
+import { useTicketData } from '../TicketDataContext';
 export const HeaderButton = () => {
+  // const [tickets, setTickets] = useState([]);
+
+  const { setFilteredTickets, tickets } = useTicketData();
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       const response = await fetch(`http://localhost:3001/Tickets`);
+
+  //       const data = await response.json();
+  //       setTickets(data);
+  //     } catch (e) {
+  //       console.error(e);
+  //     }
+  //   }
+
+  //   fetchData();
+  // }, []);
+
+  // const handleFilter = (category) => {
+  //   const filtered = tickets.filter((ticket) => ticket.ticketType === category);
+  //   setFilteredTickets(filtered);
+  // };
+
+  ///loop through data and count the amount of tickets for concerts
   return (
     <ButtonGridContainer>
       <ButtonContainer>
@@ -41,21 +58,21 @@ export const HeaderButton = () => {
           <IconContainer src={AirplaneIcon} />
           <Text margin={'0 0 0 10px'}>Travels</Text>
         </LeftContainerContent>
-        <Text margin={'0 10px 0 0'}>6</Text>
+        <Text margin={'0 10px 0 0'}>2</Text>
       </ButtonContainer>
       <ButtonContainer color={darkModeColors.foreground}>
         <LeftContainerContent>
           <IconContainer src={MoviesIcon} />
           <Text margin={'0 0 0 10px'}>Movies</Text>
         </LeftContainerContent>
-        <Text margin={'0 10px 0 0'}>6</Text>
+        <Text margin={'0 10px 0 0'}>1</Text>
       </ButtonContainer>
       <ButtonContainer color={darkModeColors.foreground}>
         <LeftContainerContent>
           <IconContainer src={ConcertsIcon} />
           <Text margin={'0 0 0 10px'}>Concerts</Text>
         </LeftContainerContent>
-        <Text margin={'0 10px 0 0'}>6</Text>
+        <Text margin={'0 10px 0 0'}>3</Text>
       </ButtonContainer>
     </ButtonGridContainer>
   );

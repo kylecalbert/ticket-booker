@@ -6,15 +6,18 @@ import { Text } from './components/Text/Text';
 import { Content } from './components/Content/Content';
 import { Footer } from './components/Footer/Footer';
 import { WebsiteFooter } from './components/Footer/WebsiteFooter';
+import { TicketDataProvider } from './components/TicketDataContext';
 function App() {
   return (
     <AppContainer>
-      <Router>
-        <Navbar />
-        <Header />
-        <Content />
-        <WebsiteFooter />
-      </Router>
+      <TicketDataProvider>
+        <Router>
+          <Navbar />
+          <Header />
+          <Content />
+          <WebsiteFooter />
+        </Router>
+      </TicketDataProvider>
     </AppContainer>
   );
 }

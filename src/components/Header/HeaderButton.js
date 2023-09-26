@@ -13,33 +13,7 @@ import { darkModeColors } from '../../constants/colors';
 
 import { Text } from '../Text/Text';
 
-import { useTicketData } from '../TicketDataContext';
 export const HeaderButton = () => {
-  // const [tickets, setTickets] = useState([]);
-
-  const { setFilteredTickets, tickets } = useTicketData();
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const response = await fetch(`http://localhost:3001/Tickets`);
-
-  //       const data = await response.json();
-  //       setTickets(data);
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, []);
-
-  // const handleFilter = (category) => {
-  //   const filtered = tickets.filter((ticket) => ticket.ticketType === category);
-  //   setFilteredTickets(filtered);
-  // };
-
-  ///loop through data and count the amount of tickets for concerts
   return (
     <ButtonGridContainer>
       <ButtonContainer>

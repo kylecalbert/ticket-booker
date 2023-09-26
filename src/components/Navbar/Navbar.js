@@ -18,7 +18,6 @@ import { NavbarLink } from './Navbar.style';
 import { NavbarInnerContainer } from './Navbar.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faCircleTrash } from '@fortawesome/free-solid-svg-icons';
 
 export const Navbar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false);

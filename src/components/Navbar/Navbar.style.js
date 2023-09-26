@@ -73,7 +73,6 @@ export const NavbarLink = styled(Link)`
   text-decoration: none;
   padding: 20px;
   font-size: 1.2em;
-
   @media (max-width: ${minWidth}) {
     display: none;
   }

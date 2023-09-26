@@ -2,11 +2,9 @@ import React, { useEffect } from 'react';
 import { ContentContainer, CardContainer } from './Content.style';
 import { Card } from './Card';
 import { useState } from 'react';
-import { useTicketData } from '../TicketDataContext';
 
 export const Content = () => {
   const [tickets, setTickets] = useState([]);
-  // const [tickets, setTickets] = useTicketData();
 
   useEffect(() => {
     async function fetchData() {

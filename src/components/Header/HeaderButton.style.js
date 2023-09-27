@@ -3,19 +3,19 @@ import { darkModeColors } from '../../constants/colors';
 
 export const ButtonGridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  overflow-y: scroll;
-  /* background-color: red; */
+  grid-template-columns: repeat(4, 1fr);
+  overflow-x: scroll;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  gap: 1rem;
 `;
 export const ButtonContainer = styled.button`
   display: flex;
   align-items: center;
 
   justify-content: space-between;
-  width: 400px;
-  height: 50px;
+  width: 25rem;
+  height: 3.125rem;
   background-color: ${(props) =>
     props.color || darkModeColors.accent}; //{darkModeColors.accent}
   color: #ffffff;
@@ -25,6 +25,10 @@ export const ButtonContainer = styled.button`
   padding-top: 8px;
   margin-top: 50px;
   font-size: 1em;
+  @media (max-width: 768px) {
+    height: 2.6;
+    width: 16rem;
+  }
 `;
 
 export const LeftContainerContent = styled.div`
@@ -39,22 +43,3 @@ export const IconContainer = styled.img`
   max-width: 100px;
   height: auto;
 `;
-
-// export const SmallTextContainer = styled.text`
-//   color: ${darkModeColors.textPrimary};
-//   text-decoration: none;
-//   font-size: 14px;
-//   margin-left: 10px;
-
-//   font-weight: bold;
-// `;
-
-// export const RightContainerContent = styled.text`
-//   color: ${darkModeColors.textPrimary};
-//   text-decoration: none;
-//   font-size: 14px;
-//   font-weight: bold;
-//   margin-right: 10px;
-// `;
-
-///the text can e made resuable

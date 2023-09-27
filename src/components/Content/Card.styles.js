@@ -47,10 +47,8 @@ export const CardDetails = styled.div`
   margin-left: 10px;
   width: 95%;
   height: 75%;
-  /* background-color: red; */
 
   margin-top: 10px;
-  /* background-color: blue; */
 `;
 
 export const TopDetailsContainer = styled.div`

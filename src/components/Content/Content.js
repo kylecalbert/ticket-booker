@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ContentContainer, CardContainer } from './Content.style';
 import { Card } from './Card';
 import { useState } from 'react';
+
 export const Content = () => {
   const [tickets, setTickets] = useState([]);
 
@@ -20,7 +21,6 @@ export const Content = () => {
     fetchData();
   }, []);
 
-  console.log(tickets);
   return (
     <ContentContainer>
       <CardContainer>

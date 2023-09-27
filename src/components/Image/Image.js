@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledImage = styled.img`
   margin: ${(props) => props.margin || '10px'};
-  max-width: 100px;
+  max-width: 2rem;
   height: auto; //height auto to allow the image to scale properly and not overstretch
 `;
 

@@ -1,7 +1,6 @@
 // Card.js
 import React from 'react';
 import {
-  AddButtonContainer,
   CardContainer,
   CardDetails,
   DateTimeContainer,
@@ -15,6 +14,7 @@ import { Footer } from '../Footer/Footer';
 
 import CalendarDark from '../../Assets/dark/calendar.png';
 import LocationDark from '../../Assets/dark/location.png';
+import TrashDark from '../../Assets/dark/trash.png';
 import { Image } from '../Image/Image';
 import { fontSizes, fontWeight } from '../Fonts/Fonts';
 //create constant for resued sizes
@@ -78,7 +78,7 @@ export const Card = ({ title, date, time, location, ticketType }) => {
         >
           {ticketType}
         </Text>
-        <AddButtonContainer>Add</AddButtonContainer>
+        <Image src={TrashDark} />
       </Footer>
     </CardContainer>
   );

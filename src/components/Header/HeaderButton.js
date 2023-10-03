@@ -12,17 +12,32 @@ import MoviesIcon from '../../Assets/MoviesIcon.png';
 import { darkModeColors } from '../../constants/colors';
 
 import { Text } from '../Text/Text';
-
+import { useContext } from 'react';
+import { TicketContext } from '../../TicketContext/TicketContext';
 export const HeaderButton = () => {
   ///create a state that sets the user category
   //on button click set categroy
   ///pass the user category into the content.js component
 
-  const [category, setCategory] = useState('');
+  const { tickets, setTickets, originalTickets } = useContext(TicketContext);
+
+  const handleButtonClick = (category) => {
+    if (category === 'All Tickets') {
+      setTickets(originalTickets);
+    } else {
+      const filterTickets = originalTickets.filter(
+        (ticket) => ticket.ticketType === category
+      );
+
+      setTickets(filterTickets);
+    }
+
+    console.log(tickets);
+  };
 
   return (
     <ButtonGridContainer>
-      <ButtonContainer>
+      <ButtonContainer onClick={() => handleButtonClick('All Tickets')}>
         <LeftContainerContent>
           <IconContainer src={TicketsIcon} />
           <Text color={darkModeColors.background} margin={'0 0 0 10px'}>
@@ -33,21 +48,30 @@ export const HeaderButton = () => {
           6
         </Text>
       </ButtonContainer>
-      <ButtonContainer color={darkModeColors.foreground}>
+      <ButtonContainer
+        onClick={() => handleButtonClick('Travel')}
+        color={darkModeColors.foreground}
+      >
         <LeftContainerContent>
           <IconContainer src={AirplaneIcon} />
           <Text margin={'0 0 0 10px'}>Travels</Text>
         </LeftContainerContent>
         <Text margin={'0 10px 0 0'}>2</Text>
       </ButtonContainer>
-      <ButtonContainer color={darkModeColors.foreground}>
+      <ButtonContainer
+        onClick={() => handleButtonClick('Movie')}
+        color={darkModeColors.foreground}
+      >
         <LeftContainerContent>
           <IconContainer src={MoviesIcon} />
           <Text margin={'0 0 0 10px'}>Movies</Text>
         </LeftContainerContent>
         <Text margin={'0 10px 0 0'}>1</Text>
       </ButtonContainer>
-      <ButtonContainer color={darkModeColors.foreground}>
+      <ButtonContainer
+        onClick={() => handleButtonClick('Concert')}
+        color={darkModeColors.foreground}
+      >
         <LeftContainerContent>
           <IconContainer src={ConcertsIcon} />
           <Text margin={'0 0 0 10px'}>Concerts</Text>

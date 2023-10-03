@@ -30,7 +30,7 @@
       "time": "8:45AM",
       "date": "8/10/2023",
       "location": "Airport Terminal 3",
-      "ticketType": "Flight"
+      "ticketType": "Travel"
     },
     {
       "id": 5,
@@ -46,7 +46,7 @@
       "time": "10:00AM",
       "date": "6/25/2023",
       "location": "Bali International Airport",
-      "ticketType": "Flight"
+      "ticketType": "Travel"
     }
   ]
 }

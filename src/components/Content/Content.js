@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ContentContainer, CardContainer } from './Content.style';
 import { Card } from './Card';
-import { useState } from 'react';
 import { TicketContext } from '../../TicketContext/TicketContext';
 import { useContext } from 'react';
 export const Content = () => {
-  const { tickets, setTickets } = useContext(TicketContext);
+  const { tickets } = useContext(TicketContext);
 
   return (
     <ContentContainer>

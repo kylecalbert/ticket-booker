@@ -14,6 +14,12 @@ import { darkModeColors } from '../../constants/colors';
 import { Text } from '../Text/Text';
 
 export const HeaderButton = () => {
+  ///create a state that sets the user category
+  //on button click set categroy
+  ///pass the user category into the content.js component
+
+  const [category, setCategory] = useState('');
+
   return (
     <ButtonGridContainer>
       <ButtonContainer>

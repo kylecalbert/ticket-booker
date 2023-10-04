@@ -1,6 +1,7 @@
 import React from 'react';
-import { ContentContainer, CardContainer } from './Content.style';
-import { Card } from './Card';
+import { ContentContainer } from './Content.style';
+import { CardList } from '../TicketCards/CardList';
+import { Card } from '../TicketCards/Card';
 import { TicketContext } from '../../TicketContext/TicketContext';
 import { useContext } from 'react';
 export const Content = () => {
@@ -8,7 +9,7 @@ export const Content = () => {
 
   return (
     <ContentContainer>
-      <CardContainer>
+      <CardList>
         {tickets.map((ticket) => (
           <Card
             id={ticket.id}
@@ -18,7 +19,7 @@ export const Content = () => {
             location={ticket.location}
           />
         ))}
-      </CardContainer>
+      </CardList>
     </ContentContainer>
   );
 };

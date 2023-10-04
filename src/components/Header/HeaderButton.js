@@ -15,12 +15,13 @@ import { Text } from '../Text/Text';
 import { useContext } from 'react';
 import { TicketContext } from '../../TicketContext/TicketContext';
 export const HeaderButton = () => {
-  ///create a state that sets the user category
-  //on button click set categroy
-  ///pass the user category into the content.js component
-
   const { tickets, setTickets, originalTickets } = useContext(TicketContext);
   const [activeButton, setActiveButton] = useState('All Tickets');
+
+  const countTicketType = (type) => {
+    return originalTickets.filter((ticket) => ticket.ticketType === type)
+      .length;
+  };
 
   const handleButtonClick = (category) => {
     setActiveButton(category);
@@ -47,7 +48,9 @@ export const HeaderButton = () => {
           <IconContainer src={TicketsIcon} />
           <Text margin={'0 0 0 10px'}>All Tickets</Text>
         </LeftContainerContent>
-        <Text color={darkModeColors.background} margin={'0 10px 0 0'}></Text>
+        <Text color={darkModeColors.background} margin={'0 10px 0 0'}>
+          {originalTickets.length}
+        </Text>
       </ButtonContainer>
       <ButtonContainer
         onClick={() => handleButtonClick('Travel')}
@@ -57,7 +60,7 @@ export const HeaderButton = () => {
           <IconContainer src={AirplaneIcon} />
           <Text margin={'0 0 0 10px'}>Travels</Text>
         </LeftContainerContent>
-        <Text margin={'0 10px 0 0'}>2</Text>
+        <Text margin={'0 10px 0 0'}>{countTicketType('Travel')}</Text>
       </ButtonContainer>
       <ButtonContainer
         onClick={() => handleButtonClick('Movie')}
@@ -67,7 +70,7 @@ export const HeaderButton = () => {
           <IconContainer src={MoviesIcon} />
           <Text margin={'0 0 0 10px'}>Movies</Text>
         </LeftContainerContent>
-        <Text margin={'0 10px 0 0'}>1</Text>
+        <Text margin={'0 10px 0 0'}>{countTicketType('Movie')}</Text>
       </ButtonContainer>
       <ButtonContainer
         onClick={() => handleButtonClick('Concert')}
@@ -77,7 +80,7 @@ export const HeaderButton = () => {
           <IconContainer src={ConcertsIcon} />
           <Text margin={'0 0 0 10px'}>Concerts</Text>
         </LeftContainerContent>
-        <Text margin={'0 10px 0 0'}>3</Text>
+        <Text margin={'0 10px 0 0'}>{countTicketType('Concert')}</Text>
       </ButtonContainer>
     </ButtonGridContainer>
   );

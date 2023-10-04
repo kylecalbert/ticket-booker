@@ -7,7 +7,6 @@ import {
   TopDetailsContainer,
   BottomDetailsContainer,
 } from './Card.styles';
-import { CardFooter } from './Card.styles';
 import { Text } from '../Text/Text';
 import { darkModeColors } from '../../constants/colors';
 import { Footer } from '../Footer/Footer';

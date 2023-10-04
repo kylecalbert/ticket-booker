@@ -14,7 +14,7 @@ export const ButtonContainer = styled.button`
   align-items: center;
 
   justify-content: space-between;
-  width: 25rem;
+  width: 24rem;
   height: 3.125rem;
 
   background-color: ${(props) =>

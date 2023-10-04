@@ -20,8 +20,10 @@ export const HeaderButton = () => {
   ///pass the user category into the content.js component
 
   const { tickets, setTickets, originalTickets } = useContext(TicketContext);
+  const [activeButton, setActiveButton] = useState('All Tickets');
 
   const handleButtonClick = (category) => {
+    setActiveButton(category);
     if (category === 'All Tickets') {
       setTickets(originalTickets);
     } else {
@@ -37,20 +39,19 @@ export const HeaderButton = () => {
 
   return (
     <ButtonGridContainer>
-      <ButtonContainer onClick={() => handleButtonClick('All Tickets')}>
+      <ButtonContainer
+        onClick={() => handleButtonClick('All Tickets')}
+        background={activeButton === 'All Tickets'}
+      >
         <LeftContainerContent>
           <IconContainer src={TicketsIcon} />
-          <Text color={darkModeColors.background} margin={'0 0 0 10px'}>
-            All Tickets
-          </Text>
+          <Text margin={'0 0 0 10px'}>All Tickets</Text>
         </LeftContainerContent>
-        <Text color={darkModeColors.background} margin={'0 10px 0 0'}>
-          6
-        </Text>
+        <Text color={darkModeColors.background} margin={'0 10px 0 0'}></Text>
       </ButtonContainer>
       <ButtonContainer
         onClick={() => handleButtonClick('Travel')}
-        color={darkModeColors.foreground}
+        background={activeButton === 'Travel'}
       >
         <LeftContainerContent>
           <IconContainer src={AirplaneIcon} />
@@ -60,7 +61,7 @@ export const HeaderButton = () => {
       </ButtonContainer>
       <ButtonContainer
         onClick={() => handleButtonClick('Movie')}
-        color={darkModeColors.foreground}
+        background={activeButton === 'Movie'}
       >
         <LeftContainerContent>
           <IconContainer src={MoviesIcon} />
@@ -70,7 +71,7 @@ export const HeaderButton = () => {
       </ButtonContainer>
       <ButtonContainer
         onClick={() => handleButtonClick('Concert')}
-        color={darkModeColors.foreground}
+        background={activeButton === 'Concert'}
       >
         <LeftContainerContent>
           <IconContainer src={ConcertsIcon} />

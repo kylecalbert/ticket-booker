@@ -33,9 +33,10 @@ export const HeaderButton = () => {
       );
 
       setTickets(filterTickets);
+      console.log('button clicked');
     }
 
-    console.log(tickets);
+    // console.log(tickets);
   };
 
   return (

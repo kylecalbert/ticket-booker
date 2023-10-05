@@ -16,9 +16,26 @@ import LocationDark from '../../Assets/dark/location.png';
 import TrashDark from '../../Assets/dark/trash.png';
 import { Image } from '../Image/Image';
 import { fontSizes, fontWeight } from '../Fonts/Fonts';
+import { TicketContext } from '../../TicketContext/TicketContext';
+import { useContext } from 'react';
 //create constant for resued sizes
 
-export const Card = ({ title, date, time, location, ticketType }) => {
+export const Card = ({ title, date, time, location, ticketType, id }) => {
+  const { tickets, setOriginalTickets, setTickets, originalTickets } =
+    useContext(TicketContext);
+
+  const handleDelete = (ticketId) => {
+    const updatedTickets = tickets.filter((ticket) => ticket.id !== ticketId);
+
+    setTickets(updatedTickets);
+
+    const updatedOriginalTickets = originalTickets.filter(
+      (ticket) => ticket.id !== ticketId
+    );
+
+    setOriginalTickets(updatedOriginalTickets);
+  };
+
   return (
     <CardContainer>
       <CardDetails>
@@ -77,7 +94,7 @@ export const Card = ({ title, date, time, location, ticketType }) => {
         >
           {ticketType}
         </Text>
-        <Image src={TrashDark} />
+        <Image src={TrashDark} onClick={() => handleDelete(id)} />
       </Footer>
     </CardContainer>
   );

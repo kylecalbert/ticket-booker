@@ -30,7 +30,14 @@ export const TicketProvider = ({ children }) => {
 
   return (
     <TicketContext.Provider
-      value={{ category, setCategory, tickets, setTickets, originalTickets }}
+      value={{
+        category,
+        setCategory,
+        tickets,
+        setTickets,
+        originalTickets,
+        setOriginalTickets,
+      }}
     >
       {children}
     </TicketContext.Provider>

@@ -7,16 +7,16 @@ import { WebsiteFooter } from './components/Footer/WebsiteFooter';
 import { TicketProvider } from './TicketContext/TicketContext';
 function App() {
   return (
-    <TicketProvider>
-      <AppContainer>
-        <Router>
-          <Navbar />
+    <AppContainer>
+      <Router>
+        <Navbar />
+        <TicketProvider>
           <Header />
           <Content />
-          <WebsiteFooter />
-        </Router>
-      </AppContainer>
-    </TicketProvider>
+        </TicketProvider>
+        <WebsiteFooter />
+      </Router>
+    </AppContainer>
   );
 }
 

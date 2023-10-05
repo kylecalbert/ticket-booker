@@ -14,10 +14,11 @@ export const ButtonContainer = styled.button`
   align-items: center;
 
   justify-content: space-between;
-  width: 25rem;
+  width: 24rem;
   height: 3.125rem;
+
   background-color: ${(props) =>
-    props.color || darkModeColors.accent}; //{darkModeColors.accent}
+    props.background ? darkModeColors.accent : darkModeColors.foreground};
   color: #ffffff;
   border: none;
   border-radius: 8px;

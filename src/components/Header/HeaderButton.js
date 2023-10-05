@@ -15,7 +15,7 @@ import { Text } from '../Text/Text';
 import { useContext } from 'react';
 import { TicketContext } from '../../TicketContext/TicketContext';
 export const HeaderButton = () => {
-  const { tickets, setTickets, originalTickets } = useContext(TicketContext);
+  const { setTickets, originalTickets } = useContext(TicketContext);
   const [activeButton, setActiveButton] = useState('All Tickets');
 
   const countTicketType = (type) => {
@@ -33,7 +33,6 @@ export const HeaderButton = () => {
       );
 
       setTickets(filterTickets);
-      console.log('button clicked');
     }
 
     // console.log(tickets);

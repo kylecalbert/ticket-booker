@@ -14,6 +14,9 @@ import { darkModeColors } from '../../constants/colors';
 import { Text } from '../Text/Text';
 import { useContext } from 'react';
 import { TicketContext } from '../../TicketContext/TicketContext';
+
+//
+
 export const HeaderButton = () => {
   const { setTickets, originalTickets } = useContext(TicketContext);
   const [activeButton, setActiveButton] = useState('All Tickets');
@@ -63,6 +66,7 @@ export const HeaderButton = () => {
         <Text margin={'0 10px 0 0'}>{countTicketType('Travel')}</Text>
       </ButtonContainer>
       <ButtonContainer
+        data-testid="movie-button"
         onClick={() => handleButtonClick('Movie')}
         background={activeButton === 'Movie'}
       >

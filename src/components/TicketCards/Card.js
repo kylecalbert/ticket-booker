@@ -94,7 +94,11 @@ export const Card = ({ title, date, time, location, ticketType, id }) => {
         >
           {ticketType}
         </Text>
-        <Image src={TrashDark} onClick={() => handleDelete(id)} />
+        <Image
+          data-testid={`delete-button-${id}`}
+          src={TrashDark}
+          onClick={() => handleDelete(id)}
+        />
       </Footer>
     </CardContainer>
   );

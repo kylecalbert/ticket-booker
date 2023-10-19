@@ -9,6 +9,9 @@ import { About } from './components/About/About';
 import { Contact } from './components/Contact/Contact';
 import { Faq } from './components/Faq/Faq';
 
+/////click on button and check url in cypress
+
+///testviewport and check if menu is visible
 function App() {
   return (
     <AppContainer>

@@ -15,7 +15,17 @@ import { Text } from '../Text/Text';
 import { useContext } from 'react';
 import { TicketContext } from '../../TicketContext/TicketContext';
 
-//
+//extract function for filter
+//create sorting by date functionality
+//create new file ....have a functiona filter tickets
+//function 2 sort tickets
+///filter then sort
+
+///visit local hos
+///button click on categoty
+///assertion that card titles appear and asset others do not appear.
+
+///Tetsing button headers: check number first, then delete card, then  check again and make sure updated
 
 export const HeaderButton = () => {
   const { setTickets, originalTickets } = useContext(TicketContext);

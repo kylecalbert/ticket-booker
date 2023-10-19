@@ -26,12 +26,14 @@ export const Navbar = () => {
       <NavbarInnerContainer>
         <LeftContainer>
           <MenuIconContainer
+            data-cy="menu-icon"
             onClick={() => {
               setExtendNavbar((current) => !current);
             }}
           >
             {extendNavbar ? (
               <FontAwesomeIcon
+                data-cy="close-icon"
                 icon={faTimes}
                 style={{ color: 'white', fontSize: '35px' }}
               />
@@ -47,10 +49,18 @@ export const Navbar = () => {
         </LeftContainer>
         <MiddleContainer>
           <MenuContainer>
-            <NavbarLink to="/">Home</NavbarLink>
-            <NavbarLink to="/About">About</NavbarLink>
-            <NavbarLink to="/Contact">Contact</NavbarLink>
-            <NavbarLink to="/FAQ">FAQ</NavbarLink>
+            <NavbarLink data-cy="home" to="/">
+              Home
+            </NavbarLink>
+            <NavbarLink data-cy="about" to="/About">
+              About
+            </NavbarLink>
+            <NavbarLink data-cy="contact" to="/Contact">
+              Contact
+            </NavbarLink>
+            <NavbarLink data-cy="faq" to="/FAQ">
+              FAQ
+            </NavbarLink>
           </MenuContainer>
         </MiddleContainer>
         <RightContainer>
@@ -59,12 +69,20 @@ export const Navbar = () => {
       </NavbarInnerContainer>
 
       {extendNavbar && (
-        <NavbarExtendedContainer>
+        <NavbarExtendedContainer data-cy="navbar-extended">
           <ExtendedMenuContainer>
-            <NavbarLinkExtended to="/Home">Home</NavbarLinkExtended>
-            <NavbarLinkExtended to="/About">About</NavbarLinkExtended>
-            <NavbarLinkExtended to="/Contact">Contact</NavbarLinkExtended>
-            <NavbarLinkExtended to="/FAQ">FAQ</NavbarLinkExtended>
+            <NavbarLinkExtended data-cy="home-extended" to="/">
+              Home
+            </NavbarLinkExtended>
+            <NavbarLinkExtended data-cy="about-extended" to="/About">
+              About
+            </NavbarLinkExtended>
+            <NavbarLinkExtended data-cy="contact-extended" to="/Contact">
+              Contact
+            </NavbarLinkExtended>
+            <NavbarLinkExtended data-cy="faq-extended" to="/FAQ">
+              FAQ
+            </NavbarLinkExtended>
           </ExtendedMenuContainer>
         </NavbarExtendedContainer>
       )}

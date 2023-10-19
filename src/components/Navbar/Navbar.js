@@ -47,7 +47,7 @@ export const Navbar = () => {
         </LeftContainer>
         <MiddleContainer>
           <MenuContainer>
-            <NavbarLink to="/Home">Home</NavbarLink>
+            <NavbarLink to="/">Home</NavbarLink>
             <NavbarLink to="/About">About</NavbarLink>
             <NavbarLink to="/Contact">Contact</NavbarLink>
             <NavbarLink to="/FAQ">FAQ</NavbarLink>

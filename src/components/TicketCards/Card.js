@@ -91,6 +91,7 @@ export const Card = ({ title, date, time, location, ticketType, id }) => {
           color={darkModeColors.accent}
           size={fontSizes.small}
           fontWeight={fontWeight.normal}
+          data-cy="ticket-type"
         >
           {ticketType}
         </Text>

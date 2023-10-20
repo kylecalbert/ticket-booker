@@ -23,7 +23,7 @@ describe('Test the Navabr routing works', () => {
 });
 
 describe('Test the Navbar Routing on Mobile screen size', () => {
-  before(() => {
+  beforeEach(() => {
     cy.viewport('iphone-6');
     cy.visit('http://localhost:3000/');
   });
@@ -38,7 +38,8 @@ describe('Test the Navbar Routing on Mobile screen size', () => {
     cy.url().should('include', '/');
   });
 
-  it('removes the navbar container whent he user clicks the icon button again', () => {
+  it('Removes the navbar menu when the user clicks the x icon', () => {
+    cy.get('[data-cy="menu-icon"]').should('be.visible').click();
     cy.get('[data-cy="menu-icon"]').should('be.visible').click();
     cy.get('[data-cy="navbar-extended"]').should('not.exist');
   });

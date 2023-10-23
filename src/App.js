@@ -1,18 +1,26 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Header } from './components/Header/Header';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
 import { AppContainer } from './App.styles';
-import { Content } from './components/Content/Content';
 import { WebsiteFooter } from './components/Footer/WebsiteFooter';
 import { TicketProvider } from './TicketContext/TicketContext';
+import { Home } from './components/Home/Home';
+import { About } from './components/About/About';
+import { Contact } from './components/Contact/Contact';
+import { Faq } from './components/Faq/Faq';
+
 function App() {
   return (
     <AppContainer>
       <Router>
         <Navbar />
         <TicketProvider>
-          <Header />
-          <Content />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Faq" element={<Faq />} />
+          </Routes>
         </TicketProvider>
         <WebsiteFooter />
       </Router>

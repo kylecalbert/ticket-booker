@@ -91,10 +91,15 @@ export const Card = ({ title, date, time, location, ticketType, id }) => {
           color={darkModeColors.accent}
           size={fontSizes.small}
           fontWeight={fontWeight.normal}
+          data-cy="ticket-type"
         >
           {ticketType}
         </Text>
-        <Image src={TrashDark} onClick={() => handleDelete(id)} />
+        <Image
+          data-testid={`delete-button-${id}`}
+          src={TrashDark}
+          onClick={() => handleDelete(id)}
+        />
       </Footer>
     </CardContainer>
   );

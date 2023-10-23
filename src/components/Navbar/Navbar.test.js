@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { Navbar } from './Navbar';
 import { MemoryRouter } from 'react-router-dom';
 describe('Navbar', () => {
-  it('Renders the Navbar without error', () => {
+  it(' Should Render the Navbar without error', () => {
     render(
       <MemoryRouter>
         <Navbar />
@@ -11,7 +11,7 @@ describe('Navbar', () => {
     );
   });
 
-  it('displays the menu links', () => {
+  it('Should display the menu links', () => {
     const { getByText } = render(
       <MemoryRouter>
         <Navbar />
@@ -27,7 +27,7 @@ describe('Navbar', () => {
     expect(faqLink).toBeInTheDocument();
   });
 
-  it('displays the Logo', () => {
+  it('Should display the Logo', () => {
     const { getByAltText } = render(
       <MemoryRouter>
         <Navbar />

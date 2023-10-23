@@ -14,6 +14,7 @@ import { darkModeColors } from '../../constants/colors';
 import { Text } from '../Text/Text';
 import { useContext } from 'react';
 import { TicketContext } from '../../TicketContext/TicketContext';
+
 export const HeaderButton = () => {
   const { setTickets, originalTickets } = useContext(TicketContext);
   const [activeButton, setActiveButton] = useState('All Tickets');
@@ -41,6 +42,7 @@ export const HeaderButton = () => {
   return (
     <ButtonGridContainer>
       <ButtonContainer
+        data-cy="alltickets-cy-btn"
         onClick={() => handleButtonClick('All Tickets')}
         background={activeButton === 'All Tickets'}
       >
@@ -55,6 +57,7 @@ export const HeaderButton = () => {
       <ButtonContainer
         onClick={() => handleButtonClick('Travel')}
         background={activeButton === 'Travel'}
+        data-cy="travel-cy-btn"
       >
         <LeftContainerContent>
           <IconContainer src={AirplaneIcon} />
@@ -63,8 +66,10 @@ export const HeaderButton = () => {
         <Text margin={'0 10px 0 0'}>{countTicketType('Travel')}</Text>
       </ButtonContainer>
       <ButtonContainer
+        data-testid="movie-button"
         onClick={() => handleButtonClick('Movie')}
         background={activeButton === 'Movie'}
+        data-cy="movie-cy-btn"
       >
         <LeftContainerContent>
           <IconContainer src={MoviesIcon} />
@@ -73,6 +78,7 @@ export const HeaderButton = () => {
         <Text margin={'0 10px 0 0'}>{countTicketType('Movie')}</Text>
       </ButtonContainer>
       <ButtonContainer
+        data-cy="concert-cy-btn"
         onClick={() => handleButtonClick('Concert')}
         background={activeButton === 'Concert'}
       >

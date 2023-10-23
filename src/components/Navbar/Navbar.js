@@ -58,7 +58,7 @@ export const Navbar = () => {
             <NavbarLink data-cy="contact" to="/Contact">
               Contact
             </NavbarLink>
-            <NavbarLink data-cy="faq" to="/FAQ">
+            <NavbarLink data-cy="faq" to="/Faq">
               FAQ
             </NavbarLink>
           </MenuContainer>

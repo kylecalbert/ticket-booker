@@ -9,7 +9,7 @@ import { TicketContext } from '../../TicketContext/TicketContext';
 import { HeaderButton } from './HeaderButton';
 import { mockData } from '../../test/MockData';
 
-describe('HeaderButton', () => {
+describe('Testing the Header Button section', () => {
   it('Should render buttons', () => {
     render(
       <TicketContext.Provider value={mockData}>

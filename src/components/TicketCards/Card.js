@@ -18,17 +18,18 @@ import { Image } from '../Image/Image';
 import { fontSizes, fontWeight } from '../Fonts/Fonts';
 import { TicketContext } from '../../TicketContext/TicketContext';
 import { useContext } from 'react';
-//create constant for resued sizes
 
 export const Card = ({ title, date, time, location, ticketType, id }) => {
   const { tickets, setOriginalTickets, setTickets, originalTickets } =
     useContext(TicketContext);
 
+  // Function to handle the deletion of a ticket
+
   const handleDelete = (ticketId) => {
+    // Filtering out the deleted ticket from the current tickets
     const updatedTickets = tickets.filter((ticket) => ticket.id !== ticketId);
-
     setTickets(updatedTickets);
-
+    // Filtering out the deleted ticket from the original set of tickets
     const updatedOriginalTickets = originalTickets.filter(
       (ticket) => ticket.id !== ticketId
     );

@@ -19,10 +19,14 @@ export const HeaderButton = () => {
   const { setTickets, originalTickets } = useContext(TicketContext);
   const [activeButton, setActiveButton] = useState('All Tickets');
 
+  // Function to count the number of tickets for a given type
+
   const countTicketType = (type) => {
     return originalTickets.filter((ticket) => ticket.ticketType === type)
       .length;
   };
+
+  // Function to handle button clicks and filter tickets based on the selected category
 
   const handleButtonClick = (category) => {
     setActiveButton(category);
@@ -35,8 +39,6 @@ export const HeaderButton = () => {
 
       setTickets(filterTickets);
     }
-
-    // console.log(tickets);
   };
 
   return (

@@ -18,7 +18,7 @@ describe('Test the Navabr routing works', () => {
   it('Should successfully navigate to the FAQ Page upon clicking FAQ', () => {
     cy.visit('http://localhost:3000/');
     cy.get('[data-cy="faq"]').click();
-    cy.url().should('include', '/FAQ');
+    cy.url().should('include', '/Faq');
   });
 });
 

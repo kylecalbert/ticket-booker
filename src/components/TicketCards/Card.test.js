@@ -1,11 +1,10 @@
-import { render, screen, fireEvent, getByTestId } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import React from 'react';
-import { TicketProvider } from '../../TicketContext/TicketContext';
 import { Card } from './Card';
 import { TicketContext } from '../../TicketContext/TicketContext';
 import { mockData } from '../../test/MockData';
 describe('Testing the Card component', () => {
-  it('Should render the card component', () => {
+  it('Should delete card from page upon clicking the delete button', () => {
     render(
       <TicketContext.Provider value={mockData}>
         {mockData.tickets.map((ticket) => (
@@ -41,14 +40,7 @@ describe('Testing the Card component', () => {
         ticketType: 'Concert',
         id: 2,
       },
-      // {
-      //   title: 'Jurassic Park Screening',
-      //   time: '3:30PM',
-      //   date: '9/12/2023',
-      //   location: 'Cineplex Cinemas',
-      //   ticketType: 'Movie',
-      //   id: 3,
-      // },
+
       {
         title: 'The Avengers',
         time: '4:00PM',
@@ -58,12 +50,5 @@ describe('Testing the Card component', () => {
         id: 4,
       },
     ]);
-
-    // expect(screen.getByText('Drake Concert')).toBeInTheDocument();
-    // expect(screen.getByText('2023-10-10')).toBeInTheDocument();
-    // expect(screen.getByText('15:00')).toBeInTheDocument();
-    // expect(screen.getByText('London')).toBeInTheDocument();
-
-    // fireEvent.click(screen.getByTestId('delete-button-1'));
   });
 });

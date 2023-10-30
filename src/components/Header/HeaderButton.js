@@ -10,7 +10,7 @@ import AirplaneIcon from '../../Assets/AirplaneIcon.png';
 import ConcertsIcon from '../../Assets/ConcertsIcon.png';
 import MoviesIcon from '../../Assets/MoviesIcon.png';
 import { darkModeColors } from '../../constants/colors';
-
+import { sortTicketsByDate } from '../Sorting/Sorting';
 import { Text } from '../Text/Text';
 import { useContext } from 'react';
 import { TicketContext } from '../../TicketContext/TicketContext';
@@ -40,6 +40,8 @@ export const HeaderButton = () => {
       setTickets(filterTickets);
     }
   };
+
+  useEffect(() => {}, [originalTickets]);
 
   return (
     <ButtonGridContainer>

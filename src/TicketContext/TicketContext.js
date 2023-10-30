@@ -5,8 +5,8 @@ export const TicketContext = createContext(null);
 export const TicketProvider = ({ children }) => {
   const [tickets, setTickets] = useState([]);
   const [originalTickets, setOriginalTickets] = useState([]);
-
-  ////create state of the different ticket types, loop through the data and filter each the tickets, then count
+  const [selectedCategory, setSelectedCategory] = useState('Default');
+  const [originalOrder, setOriginalOrder] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -31,6 +31,10 @@ export const TicketProvider = ({ children }) => {
         setTickets,
         originalTickets,
         setOriginalTickets,
+        selectedCategory,
+        setSelectedCategory,
+        originalOrder,
+        setOriginalOrder,
       }}
     >
       {children}
